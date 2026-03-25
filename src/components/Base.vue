@@ -1,8 +1,13 @@
 <template>
-  <div class="baseBeverage"></div>
+  <div class="baseBeverage" :style="{ backgroundColor: props.baseColor }"></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+type BaseProp = {
+  baseColor: string;
+};
+const props = defineProps<BaseProp>();
+</script>
 
 <style scoped>
 .baseBeverage {
